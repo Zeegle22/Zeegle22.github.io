@@ -1,0 +1,118 @@
+:root {
+  --bg: #fdfcfa;
+  --text: #1f2328;
+  --muted: #5d636b;
+  --rule: #e4e1db;
+  --link: #1d4f91;
+  --accent: #8a3b12;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181b;
+    --text: #e6e4e0;
+    --muted: #a0a5ab;
+    --rule: #2e3236;
+    --link: #8db4ea;
+    --accent: #e3a47c;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+main, footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+main { padding-top: 56px; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.intro {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.photo {
+  width: 160px;
+  height: auto;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+.role { margin: 0 0 12px; color: var(--muted); }
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  font-size: 0.95rem;
+}
+
+section { margin-bottom: 40px; }
+
+h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 6px;
+  margin: 0 0 20px;
+}
+
+.paper { margin-bottom: 22px; }
+.paper h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+.paper h3 a { color: var(--text); }
+.paper h3 a:hover { color: var(--link); }
+.meta { margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; }
+.status { color: var(--accent); }
+
+details { margin-top: 4px; font-size: 0.95rem; }
+summary {
+  cursor: pointer;
+  color: var(--link);
+  width: fit-content;
+}
+details p { margin: 6px 0 0; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding-top: 12px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  main { padding-top: 32px; }
+  .intro { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .photo { width: 120px; }
+  h1 { font-size: 1.9rem; }
+}
